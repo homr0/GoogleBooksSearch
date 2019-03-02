@@ -1,0 +1,9 @@
+nav .brand-logo {
+  width: 8rem;
+  padding: 0 1rem;
+}
+
+nav #nav-mobile {
+  position: absolute;
+  left: 9rem;
+}
