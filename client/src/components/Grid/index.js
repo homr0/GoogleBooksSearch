@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.css";
 
 // Main element.
 export const Main = ({children}) => {
