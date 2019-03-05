@@ -1,10 +1,8 @@
 import axios from "axios";
 
-// Export an object with a "search" method that searches the Giphy API for the passed query
+// Export an object with a "search" method that searches the Google Books API for the passed query
 export default {
-  search: query => {
-    return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query);
-  },
+  search: query => axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query),
   // Gets all books
   getBooks: () => {
     return axios.get("/api/books");
