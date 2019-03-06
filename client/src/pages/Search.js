@@ -75,8 +75,7 @@ class Search extends Component {
           <Col size="12">
             <List header="Search Results">
               {this.state.books.map(book => 
-              <BookListing 
-                key={book.id}
+              <BookListing key={book.id}
                 title={book.volumeInfo.title}
                 authors={book.volumeInfo.authors || []}
                 description={book.volumeInfo.description}
