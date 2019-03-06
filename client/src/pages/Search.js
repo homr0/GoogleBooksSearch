@@ -83,7 +83,7 @@ class Search extends Component {
                 link={book.volumeInfo.infoLink}
 
                 id={book.id}
-                btnColors="blue lighten-3"
+                btnColors="blue lighten-2"
                 btnLabel="Save"
                 handleClickEvent={() => this.saveBook({
                   title: book.volumeInfo.title,
