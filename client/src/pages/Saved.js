@@ -41,7 +41,7 @@ class Saved extends Component {
               link={book.link}
 
               id={book._id}
-              btnColors="red"
+              btnColors="red lighten-1"
               btnLabel="Delete"
               handleClickEvent={() => this.deleteBook(book._id)}
             />)}

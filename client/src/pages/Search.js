@@ -59,7 +59,7 @@ class Search extends Component {
                 <Row>
                   <Col size="12">
                     <Btn
-                      colors="green right"
+                      colors="deep-purple lighten-3 right"
                       handleClickEvent={this.handleFormSubmit}
                     >
                       Search
@@ -83,7 +83,7 @@ class Search extends Component {
                 link={book.volumeInfo.infoLink}
 
                 id={book.id}
-                btnColors="blue"
+                btnColors="blue lighten-3"
                 btnLabel="Save"
                 handleClickEvent={() => this.saveBook({
                   title: book.volumeInfo.title,

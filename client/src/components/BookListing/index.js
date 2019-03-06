@@ -21,7 +21,7 @@ const BookListing = props => {
             {props.btnLabel}
           </Btn>
 
-          <BtnA colors="yellow right" link={props.link}>
+          <BtnA colors="light-blue lighten-3 right" link={props.link}>
             View
           </BtnA>
         </Col>
