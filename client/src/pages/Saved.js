@@ -20,6 +20,7 @@ class Saved extends Component {
   };
 
   deleteBook = (id) => {
+    console.log(id);
     API.deleteBook(id)
       .then(res => this.loadBooks())
       .catch(err => console.log(err));
@@ -32,18 +33,17 @@ class Saved extends Component {
           <Col size="12">
             <List header="Saved Books">
               {this.state.books.map(book => 
-              <BookListing 
-              key={book.id}
+              <BookListing key={book._id}
               title={book.title}
               authors={book.authors}
               description={book.description}
               image={book.image}
               link={book.link}
 
-              id={book.id}
+              id={book._id}
               btnColors="red"
               btnLabel="Delete"
-              handleClickEvent={() => this.deleteBook(book.id)}
+              handleClickEvent={() => this.deleteBook(book._id)}
             />)}
             </List>
           </Col>
