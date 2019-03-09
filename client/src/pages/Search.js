@@ -13,7 +13,7 @@ class Search extends Component {
   };
 
   componentDidMount() {
-    this.searchBook("Harry Potter");
+    this.searchBook("");
   }
 
   searchBook = query => {
@@ -23,8 +23,16 @@ class Search extends Component {
   };
 
   saveBook = book => {
+    const title = book.title;
+    const author = book.authors;
     API.saveBook(book)
-      .then(res => console.log("Success!"))
+      .then(() => {
+        API.savedBook();
+        alert("Saved " + title);
+        // window.Materialize.toast({
+        //   html: "Saved <em>" + title + "</em> by " + author.join(", ")
+        // });
+      })
       .catch(err => console.log(err));
   };
 
@@ -74,7 +82,7 @@ class Search extends Component {
         <Row>
           <Col size="12">
             <List header="Search Results">
-              {this.state.books.map(book => 
+              {(this.state.books.length > 0) ? this.state.books.map(book => 
               <BookListing key={book.id}
                 title={book.volumeInfo.title}
                 authors={book.volumeInfo.authors || []}
@@ -93,7 +101,7 @@ class Search extends Component {
                   link: book.volumeInfo.infoLink
                 })}
               />
-              )}
+              ) : <ListItem>Please put in a valid search query.</ListItem>}
             </List>
           </Col>
         </Row>
