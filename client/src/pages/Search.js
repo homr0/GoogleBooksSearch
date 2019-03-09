@@ -28,7 +28,7 @@ class Search extends Component {
     API.saveBook(book)
       .then(() => {
         API.savedBook();
-        alert("Saved " + title);
+        alert("Saved \"" + title + "\"");
         // window.Materialize.toast({
         //   html: "Saved <em>" + title + "</em> by " + author.join(", ")
         // });
